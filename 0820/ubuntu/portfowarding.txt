@@ -1,0 +1,24 @@
+1. 호스트 윈도우 - wsl 포트포워딩
+    netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=80 connectaddress=172.21.251.124
+
+2. wsl - 우분투 포트포워딩
+    [https://velog.io/@shawnhansh/Ubuntu-포트포워딩Portforwarding](https://velog.io/@shawnhansh/Ubuntu-%ED%8F%AC%ED%8A%B8%ED%8F%AC%EC%9B%8C%EB%94%A9Portforwarding)
+
+3. 우분투(WSL)에 파일(.war) 올리기
+    https://bbeomgeun.tistory.com/139
+
+4. 우분투에 NginX설치 및 구동
+    https://jaehyeon48.github.io/nginx/configure-nginx-on-ubuntu-2004/
+
+5. 우분투 NginX 포트포워딩
+    [https://vividswan.tistory.com/entry/우분투에-Nginx-설치-포트포워딩](https://vividswan.tistory.com/entry/%EC%9A%B0%EB%B6%84%ED%88%AC%EC%97%90-Nginx-%EC%84%A4%EC%B9%98-%ED%8F%AC%ED%8A%B8%ED%8F%AC%EC%9B%8C%EB%94%A9)
+
+6. 우분투에 도커 컨테이너 설치
+
+
+cf.
+공식 도큐먼트
+    https://docs.docker.com/engine/install/ubuntu/
+
+우분투에 도커 컨테이너설치 + 컨테이너에 nginx 설치
+    https://www.youtube.com/watch?v=YMMItOEtz6U

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ht_03_layout.html</title>
+<style>
+@import url("base.css");
+</style>
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js">
+</script>
+</head>
+<body>
+	<div style="width: auto; margin: 0 auto; border: 1px solid navy;">
+		<div class="header">
+			<h3>Header</h3>
+		</div>
+		<div class="middle">
+			<div class="menu">
+				<h3>Menu</h3>
+			</div>
+			<div class="content">
+				<h3>Content</h3>
+				<h4 id="msg"></h4>
+			</div>
+		</div>
+		<div class="footer">
+			<h3>Footer</h3>
+		</div>
+	</div>
+
+	<script>
+		// $ : jquery의 구문이라는 뜻
+		// ready : doc tree가 완전히 구현된다면 수행할 동작을 정의하는 부분
+		$(document).ready(function(){alert("hello")});
+
+		// Ajax(Asynchronous JavaScript and XML)
+		// XMLHTTPRequest
+		//let result = '';
+		//$.get("msg.json",function(data){
+		//	result = data;
+		//	console.log('1.',result)
+		// 	console.log('2.',result.text)
+		// });
+		// console.log('3.',result);
+
+		//promise pattern
+		let result2 = '';
+		$.get('msg.json',{name:"홍길동"},function(){
+			console.log('응답 대기중');
+		}).then(function(data){
+			result2= data;
+			console.log('4.',result2);
+		}).then(function(){
+			console.log('5.',result2);
+			$('#msg').text(result2.text);
+		});
+		</script>
+</body>
+</html>
